@@ -1,0 +1,92 @@
+.about {
+    color: white;
+    position: relative;
+}
+.about .width {
+    height: 100%;
+}
+.about .show {
+    overflow: scroll;
+}
+.about .text {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.about.show .text {
+    display: block;
+}
+.about p:first-child {
+    font-size: 2.2em;
+    font-weight: bold;
+    max-height: initial;
+    display: block;
+    margin: 1em 0;
+    opacity: 1;
+}
+.about p {
+    max-height: 0px;
+    overflow: hidden;
+    margin: 0;
+    opacity: 0;
+    transition: all 0.2s;
+}
+.about.show p {
+    max-height: initial;
+    margin: 1em  0;
+    opacity: 1;
+    transition: all 0.2s;
+}
+.about button {
+    margin: 1em 0 2em 0;
+}
+.bg {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.bg .mask {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5) url('../../img/dotted.png') repeat center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.75;
+    transition: all 0.3s;
+}
+.about.show .bg .mask {
+    opacity: 0.95;
+    background: rgba(0, 0, 0, 0.75) url('../../img/dotted.png') repeat center;
+}
+.bg video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 960px) {
+    .bg video {
+        min-width: initial;
+    }
+}
+
+@media (max-width: 720px) {
+    .about p:first-child {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 540px) {
+    .about p:first-child {
+        font-size: 1.5em;
+    }
+}

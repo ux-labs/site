@@ -1,0 +1,70 @@
+header {
+    display: flex;
+    background-color: #fff;
+    box-shadow: rgba(0,0,0,0.1) 0.1em 0.1em .25em;
+    height: 3em;
+    justify-content: center;
+    position:-webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+header .logo {
+    height: 90%;
+    width: 100%;
+    margin: 0 auto 0 0;
+    background: transparent url('../../logo/logo-uxlabs-horizontal.svg') left/contain no-repeat;
+}
+header nav {
+    position: relative;
+    height: 100%;
+}
+nav button {
+    background: transparent url('../../img/menu-close.png') center/40% no-repeat;
+    height: 3em;
+    width: 3em;
+    margin: 0;
+    transition: all 0.2s;
+    padding: 0;
+    transform: rotate(90deg);
+}
+nav.hide button {
+    background-image: url('../../img/menu.png');
+    transition: all 0.2s;
+    transform: rotate(0deg);
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 3em;
+    right: 0;
+    background: #fff;
+    box-shadow: rgba(0,0,0,0.1) 0.1em 0.1em .25em;
+    max-height: 20em;
+    overflow: hidden;
+    opacity: 1;
+    transition: all 0.4s;
+}
+nav.hide ul {
+    max-height: 0%;
+    opacity: 1;
+    transition: all 0.4s;
+}
+nav li {
+    white-space: nowrap;
+    text-align: right;
+    margin: 0.1em 0 0 0;
+}
+nav a {
+    padding: 0.5em 1em;
+    display: block;
+    text-decoration: none;
+    color: darkblue;
+    line-height: 1.75em;
+}
+nav a:hover {
+    background-color: #5c88da;
+    color: #fff;
+}
